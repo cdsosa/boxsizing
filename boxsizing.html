@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>box-sizing:border-box</title>
+    <style type="text/css">
+div {
+    width:400px;
+    height:150px;
+    outline:1px solid magenta;
+    margin:0 auto;
+}
+.padding {
+    padding:25px;
+}
+.borderbox {
+    box-sizing:border-box;
+}
+.border {
+    border:25px solid pink;
+}
+    </style>
+</head>
+<body>
+
+<div>This box is 300 x 200px with some text inside. The text flows to the edges of the box.</div>
+<div class="padding">This box is 300 x 200px with 25px of padding.  The padding adds to the height or width of the box; thus, the actual size of the box increases.  Of course, the text does not invade the padded area.</div>
+<div class="padding border">This box is 300 x 200px with 25px of padding and 25px borders. The padding and borders add to the width and/or height of the box.</div>
+<div class="padding border borderbox">This box is 300 x 200px with 25px of padding and 25px borders AND uses box-sizing:border-box.</div>
+<p> Box-sizing:border-box appled to a container, causes padding and borders to be included in the width and/or height of the box.  Therefore, the outer dimension of the container do not change.</p>
+
+</body>
+</html>
